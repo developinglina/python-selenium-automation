@@ -7,7 +7,7 @@ from time import sleep
 CART_ICON = (By.XPATH, '//*[@data-test="@web/CartLink"]')
 EMPTY_CART_MESSAGE = (By.XPATH, '//h1[text()="Your cart is empty"]')
 
-@given('a user opens Target homepage')
+@given('Target homepage is opened')
 def open_google(context):
     context.driver.get('https://www.target.com/')
     sleep(10)
