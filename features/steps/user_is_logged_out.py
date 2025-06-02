@@ -24,7 +24,7 @@ def click_sign_in_side_nav(context):
     sleep(10)
 @then('Sign In form is opened')
 def verify_sign_in_form(context):
-    #verify presence of sign in field
+
     input_field = context.driver.find_element(By.ID, "username")
     assert input_field.is_displayed()
     print("sign in form is displayed")
