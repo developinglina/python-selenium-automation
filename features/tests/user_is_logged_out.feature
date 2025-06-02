@@ -7,3 +7,4 @@ Feature: Sign In Page
     When "sign in" from the right-side navigation menu is clicked
     Then Sign In form is opened
 
+
