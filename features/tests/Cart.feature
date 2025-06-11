@@ -1,5 +1,14 @@
 Feature: Cart functionality
 
+    Scenario Outline: User can add an item to cart
+      Given Target homepage is opened
+      When the user searches for <product_name>
+      Then Verify correct search result display for <expected_result>
+
+      Examples:
+      | product_name | expected_result|
+      | tea          | tea
+
   Scenario: Display message when cart is empty
     Given Target homepage is opened
     When the user clicks on the cart icon at the top of the page
@@ -7,8 +16,5 @@ Feature: Cart functionality
 
 
 
-    Scenario: User can add an item to cart
-      Given Target homepage is opened
-      When the user searches for mug
-      Then Verify correct search result display for mug
+
 

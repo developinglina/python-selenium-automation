@@ -21,4 +21,6 @@ def click_sign_in(context):
 @when('the user searches for {product_name}')
 def search_product(context, product_name):
     context.driver.find_element(By.ID, 'search').send_keys(product_name)
-    context.driver.find_element(By.XPATH, "//button[data_test='@web/Search/SearchButton']")
+    sleep(10)
+    context.driver.find_element(By.XPATH, "//button[@aria-label='search']").click()
+    sleep(5)
