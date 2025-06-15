@@ -4,6 +4,5 @@ from time import sleep
 
 
 @given('Target homepage is opened')
-def open_google(context):
+def open_target(context):
     context.driver.get('https://www.target.com/')
-    sleep(10)

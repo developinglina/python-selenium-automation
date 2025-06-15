@@ -1,4 +1,4 @@
-  Feature : Login Functionality
+Feature: Login Functionality
 
 Scenario: Logged out user can navigate to the Sign In form
     Given Target homepage is opened
