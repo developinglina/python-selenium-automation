@@ -26,3 +26,4 @@ def search_product(context, product_name):
     sleep(10)
     context.driver.find_element(*SEARCH_BTN).click()
     sleep(5)
+    context.app.header.search_product()
