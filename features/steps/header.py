@@ -10,8 +10,7 @@ SEARCH_BTN = (By.XPATH, "//button[@aria-label='search']")
 
 @when('the user clicks on the cart icon at the top of the page')
 def click_on_cart_icon(context):
-    context.driver.find_element(*CART_ICON).click()
-    sleep(15)
+    context.app.header.click_on_cart_icon()
 
 
 @when('the user clicks the "Sign in" button')
