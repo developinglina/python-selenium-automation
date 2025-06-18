@@ -21,8 +21,5 @@ def click_sign_in(context):
 
 @when('the user searches for {product_name}')
 def search_product(context, product_name):
-    context.driver.find_element(*SEARCH_FIELD).send_keys(product_name)
-    sleep(10)
-    context.driver.find_element(*SEARCH_BTN).click()
-    sleep(5)
-    context.app.header.search_product()
+    context.app.header.search_product(product_name)
+
