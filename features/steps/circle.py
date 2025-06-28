@@ -17,5 +17,7 @@ def verify_num_of_cells(context):
     elements = context.driver.find_elements(*BENEFIT_CELLS )
     context.wait.until(EC.presence_of_all_elements_located(BENEFIT_CELLS))
 
-    # Print how many elements were found
-    print("Number elements found:", len(elements))
+    actual = len(elements)
+    print("Number of elements found:", actual)
+    assert actual >= 10, f"Expected at least 10 benefit cells, but found {actual}"
+
