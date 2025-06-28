@@ -16,9 +16,9 @@ def verify_cart(context):
     # Find all elements matching the selector
     cart_items_elements = context.driver.find_elements(*CART_ITEMS)
 
-    # Check if list is not empty (element found)
-    if len(cart_items_elements) > 0:
-        # Get the first element's text and print it
-        print("Cart items found: ", cart_items_elements[0].text)
-    else:
-        print("Cart items not found.")
+    print("Cart items found: ", cart_items_elements[0].text)
+    # Assert that at least one cart item is found
+    assert len(cart_items_elements) > 0, "No cart items found in the cart."
+
+
+
